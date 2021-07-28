@@ -6,6 +6,7 @@ val logbackVersion = "1.2.3"
 val scalaLoggingVersion = "3.9.3"
 
 scalaVersion := "2.13.5"
+fork := true
 
 libraryDependencies ++= Seq(
   "org.tpolecat" %% "doobie-core" % doobieVersion,
@@ -15,8 +16,6 @@ libraryDependencies ++= Seq(
   "ch.qos.logback" % "logback-classic" % logbackVersion,
   "com.typesafe.scala-logging" %% "scala-logging" % scalaLoggingVersion
 )
-
-fork := true
 
 lazy val example = project
   .settings(
